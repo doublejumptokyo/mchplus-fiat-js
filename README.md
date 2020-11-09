@@ -25,9 +25,10 @@ yarn add mchplus-fiat-js
 ```js
 import MchplusAuth from 'mchplus-fiat-js'
 
+const clientId = 'mch' //set clientId. Published by doublejump
 const currencyType = 'eth_value' // set currencyType ＊JPY→"jpy_value" , USD→"usd_value", ETH→"eth_value"
 
-const mchplusFiat = new MchplusFiat(currencyType)
+const mchplusFiat = new MchplusFiat(clientId, currencyType)
 
 // call methods here
 ```

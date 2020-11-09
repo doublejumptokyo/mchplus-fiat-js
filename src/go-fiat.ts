@@ -1,16 +1,18 @@
 import axios from 'axios'
 
 export class GoFiat {
+  private clientId: string
   private currencyType: string
 
   defaultAccount: string
 
-  constructor(currencyType) {
+  constructor(clientId,currencyType) {
+    this.clientId = clientId
     this.currencyType = currencyType
   }
 
   async getGoFiatSession(logoImageURL, itemName, itemValue, currencyValue, taxIncluded, userAddress, successURL, cancelURL) {
-    const EndPointURL = 'https://ethtx.mch.plus/go/session/mch';
+    const EndPointURL = 'https://ethtx.mch.plus/go/session/' + this.clientId;
 
     const body = JSON.stringify({
       "logo_image_url": logoImageURL,
