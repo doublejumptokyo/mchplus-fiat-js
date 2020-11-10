@@ -1,6 +1,6 @@
 {
   "name": "@doublejumptokyo/mchplus-fiat-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -33,6 +33,6 @@
     "typescript": "^3.5.3"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
